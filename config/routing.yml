@@ -1,0 +1,8 @@
+dvb_newsletter_list:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                dvbNewsletterList
+    module:               dvbNewsletterAdminList
+    prefix_path:          /newsletter/lists
+    column:               id
+    with_wildcard_routes: true

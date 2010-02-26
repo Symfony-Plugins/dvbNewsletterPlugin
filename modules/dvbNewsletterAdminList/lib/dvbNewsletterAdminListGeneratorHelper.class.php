@@ -24,13 +24,13 @@
  */
 
 /**
- * PlugindvbNewsletterSubscriber form.
+ * dvbNewsletterAdminList module helper.
  *
- * @package    ##PROJECT_NAME##
- * @subpackage form
- * @author     ##AUTHOR_NAME##
+ * @package    vitauniversitaria
+ * @subpackage dvbNewsletterAdminList
+ * @author     Davide Bellettini <davide.bellettini@gmail.com>
  * @version    SVN: $Id$
  */
-abstract class PlugindvbNewsletterSubscriberForm extends BasedvbNewsletterSubscriberForm
+class dvbNewsletterAdminListGeneratorHelper extends BaseDvbNewsletterAdminListGeneratorHelper
 {
 }

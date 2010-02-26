@@ -59,6 +59,10 @@ dvbNewsletterSubscriber:
     Timestampable: ~
       
 dvbNewsletterListSubscriber:
+  options:
+    symfony:
+      form: false
+      filter: false
   columns:
     dvb_newsletter_list_id:
       type: integer(4)

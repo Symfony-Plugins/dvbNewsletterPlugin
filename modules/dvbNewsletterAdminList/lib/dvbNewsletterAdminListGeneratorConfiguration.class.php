@@ -1,19 +1,19 @@
 <?php
 /*
  * The MIT License
- *
+ * 
  * Copyright (c) 2010 Davide Bellettini <davide@davidebellettini.it>
- *
+ * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- *
+ * 
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,20 +24,13 @@
  */
 
 /**
- * PlugindvbNewsletterList form.
+ * dvbNewsletterAdminList module configuration.
  *
- * @package    ##PROJECT_NAME##
- * @subpackage form
- * @author     ##AUTHOR_NAME##
+ * @package    vitauniversitaria
+ * @subpackage dvbNewsletterAdminList
+ * @author     Davide Bellettini <davide.bellettini@gmail.com>
  * @version    SVN: $Id$
  */
-abstract class PlugindvbNewsletterListForm extends BasedvbNewsletterListForm
+class dvbNewsletterAdminListGeneratorConfiguration extends BaseDvbNewsletterAdminListGeneratorConfiguration
 {
-    public function setupInheritance()
-    {
-        parent::setupInheritance();
-        
-        $this->offsetUnset('created_at');
-        $this->offsetUnset('updated_at');
-    }
 }
