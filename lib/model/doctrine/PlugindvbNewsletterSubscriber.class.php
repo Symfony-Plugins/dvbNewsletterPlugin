@@ -31,7 +31,7 @@
  * @package    ##PACKAGE##
  * @subpackage ##SUBPACKAGE##
  * @author     ##NAME## <##EMAIL##>
- * @version    SVN: $Id: Builder.php 7200 2010-02-21 09:37:37Z beberlei $
+ * @version    SVN: $Id$
  */
 abstract class PlugindvbNewsletterSubscriber extends BasedvbNewsletterSubscriber
 {
