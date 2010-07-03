@@ -22,8 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+require_once dirname(__FILE__).'/../lib/BaseDvbNewsletterSubscriptionActions.class.php';
 
-class dvbNewsletterSubscriptionsActions extends BaseDvbNewsleterSubscriptionsActions
+class dvbNewsletterSubscriptionActions extends BaseDvbNewsletterSubscriptionActions
 {
     
 }

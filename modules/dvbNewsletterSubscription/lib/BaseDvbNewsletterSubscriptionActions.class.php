@@ -23,7 +23,10 @@
  * THE SOFTWARE.
  */
 
-abstract class BaseDvbNewsleterSubscriptionsActions extends sfActions
+abstract class BaseDvbNewsletterSubscriptionActions extends sfActions
 {
-    
+    public function executeIndex(sfWebRequest $request)
+    {
+        
+    }
 } 
