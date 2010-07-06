@@ -10,4 +10,11 @@
  */
 abstract class PlugindvbNewsletterSubscriberForm extends BasedvbNewsletterSubscriberForm
 {
+    public function setupInheritance()
+    {
+        parent::setupInheritance();
+
+        $this->offsetUnset('created_at');
+        $this->offsetUnset('updated_at');
+    }
 }

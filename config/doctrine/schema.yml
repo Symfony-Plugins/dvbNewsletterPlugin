@@ -36,12 +36,17 @@ dvbNewsletterList:
     name:
       type: string(255)
       notnull: true
+    description:
+      type: string(8192)
+      notnull: true
   relations:
     Subscribers:
       foreignAlias: Newsletters
-      class: Subscriber
-      refClass: NewsletterSubscriber
+      class: dvbNewsletterSubscriber
+      refClass: dvbNewsletterListSubscriber
   actAs:
+    Sluggable:
+      fields: [name]
     Timestampable: ~     
       
 dvbNewsletterSubscriber:

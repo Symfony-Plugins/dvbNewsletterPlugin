@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="EN" target-language="it" original="dvb_newsletter" datatype="plaintext">
+    <header/>
+    <body>
+      <trans-unit id="1">
+        <source>List %%list%%</source>
+        <target>Lista %%list%%</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>See other lists</source>
+        <target>Visualizza le altre liste</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

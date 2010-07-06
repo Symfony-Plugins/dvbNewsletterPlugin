@@ -1,8 +1,29 @@
-dvb_newsletter_list:
+# backend
+dvb_newsletter_admin_list:
   class: sfDoctrineRouteCollection
   options:
     model:                dvbNewsletterList
     module:               dvbNewsletterAdminList
-    prefix_path:          /newsletter/lists
+    prefix_path:          /newsletter/admin/list
     column:               id
+    with_wildcard_routes: true
+
+dvb_newsletter_admin_subscriber:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                dvbNewsletterSubscriber
+    module:               dvbNewsletterAdminSubscriber
+    prefix_path:          /newsletter/admin/subscribers
+    column:               id
+    with_wildcard_routes: true
+    
+# frontend
+dvb_newsletter_list:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                dvbNewsletterList
+    module:               dvbNewsletterList
+    prefix_path:          /newsletter
+    column:               slug
+    actions:              [list,show]
     with_wildcard_routes: true

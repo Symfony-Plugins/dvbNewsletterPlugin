@@ -1,0 +1,21 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           dvbNewsletterSubscriber
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              subscriber
+    plural:                subscribers
+    route_prefix:          dvb_newsletter_admin_subscriber
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    ~
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~
