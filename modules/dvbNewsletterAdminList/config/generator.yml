@@ -15,11 +15,11 @@ generator:
       actions: ~
       fields:  ~
       list:
-        title: 'Newsletter Lists'
+        title: 'Lists'
         display: [=name,created_at,updated_at]
       filter:  ~
       form:
-        display: [name]
+        display: [name,description, language_id,default_format,visibility]
       edit:    ~
       new:
-        title: 'New List'
+        title: 'Create a new list'

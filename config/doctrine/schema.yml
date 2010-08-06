@@ -26,6 +26,13 @@ options:
   charset: utf8
   collate: utf8_general_ci
 
+dvbNewsletterLanguage:
+  tableName: wnl_languages
+  columns:
+    id:
+      type: string(2)
+      primary: true
+
 dvbNewsletterList:
   tableName: wnl_lists
   columns:
@@ -40,11 +47,36 @@ dvbNewsletterList:
     description:
       type: string(8192)
       notnull: true
+    language_id:
+      type: string(2)
+      notnull: true
+    default_format:
+      type: enum
+      values:
+        - text
+        - html
+        - text+html
+      default: 'text'
+      notnull: true
+    visibility:
+      type: enum
+      values:
+        - public
+        - private
+      default: public
+      notnull: true
   relations:
     Subscribers:
       foreignAlias: Newsletters
       class: dvbNewsletterSubscriber
       refClass: dvbNewsletterListSubscriber
+      local: list_id
+      foreign: subscriber_id
+    Language:
+      foreignAlias: Newsletters
+      class: dvbNewsletterLanguage
+      local: language_id
+      foreign: id
   actAs:
     Sluggable:
       fields: [name]
@@ -72,21 +104,25 @@ dvbNewsletterListSubscriber:
       form: false
       filter: false
   columns:
-    dvb_newsletter_list_id:
+    list_id:
       type: integer(4)
       unsigned: true
       primary: true
-    dvb_newsletter_subscriber_id:
+    subscriber_id:
       type: integer(4)
       unsigned: true
       primary: true
   relations:
-    dvbNewsletterList:
+    List:
+      class: dvbNewsletterList
       foreignAlias: NewsletterSubscribers
+      local: list_id
       onDelete: 'NO ACTION'
       onUpdate: CASCADE
-    dvbNewsletterSubscriber:
+    Subscriber:
+      class: dvbNewsletterSubscriber
       foreignAlias: NewsletterSubscribers
+      local: subscriber_id
       onDelete: CASCADE
       onUpdate: CASCADE
   actAs:
