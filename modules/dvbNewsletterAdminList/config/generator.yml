@@ -19,7 +19,7 @@ generator:
         display: [=name,created_at,updated_at]
       filter:  ~
       form:
-        display: [name,description, language_id,default_format,visibility]
+        display: [name,description, language_id,default_format,visibility,enabled]
       edit:    ~
       new:
         title: 'Create a new list'

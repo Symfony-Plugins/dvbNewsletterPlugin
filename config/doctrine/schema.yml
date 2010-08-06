@@ -65,6 +65,10 @@ dvbNewsletterList:
         - private
       default: public
       notnull: true
+    enabled:
+      type: boolean
+      notnull: true
+      default: false
   relations:
     Subscribers:
       foreignAlias: Newsletters

@@ -32,6 +32,14 @@
         <source>Lists</source>
         <target>Liste</target>
       </trans-unit>
+      <trans-unit id="8">
+        <source>Enabled</source>
+        <target>Abilitata</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Subscribers</source>
+        <target>Iscritti</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
