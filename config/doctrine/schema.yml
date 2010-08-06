@@ -72,7 +72,7 @@ dvbNewsletterList:
   relations:
     Subscribers:
       foreignAlias: Newsletters
-      class: dvbNewsletterSubscriber
+      class: sfGuardUser
       refClass: dvbNewsletterListSubscriber
       local: list_id
       foreign: subscriber_id
@@ -86,23 +86,8 @@ dvbNewsletterList:
       fields: [name]
     Timestampable: ~     
       
-dvbNewsletterSubscriber:
-  tableName: wnl_subscribers
-  columns:
-    id:
-      type: integer(4)
-      unsigned: true
-      autoincrement: true
-      primary: true
-    email:
-      type: string(255)
-      notnull: true
-      unique: true
-  actAs:
-    Timestampable: ~
-      
-dvbNewsletterListSubscriber:
-  tableName: wnl_lists_has_subscribers
+dvbNewsletterSubscription:
+  tableName: wnl_subscriptions
   options:
     symfony:
       form: false
@@ -113,9 +98,16 @@ dvbNewsletterListSubscriber:
       unsigned: true
       primary: true
     subscriber_id:
-      type: integer(4)
-      unsigned: true
+      type: integer
       primary: true
+    is_active:
+      type: boolean
+      notnull: true
+      default: false
+    activation_key:
+      type: string(40)
+      notnull: false
+      unique: true
   relations:
     List:
       class: dvbNewsletterList
@@ -124,7 +116,7 @@ dvbNewsletterListSubscriber:
       onDelete: 'NO ACTION'
       onUpdate: CASCADE
     Subscriber:
-      class: dvbNewsletterSubscriber
+      class: sfGuardUser
       foreignAlias: NewsletterSubscribers
       local: subscriber_id
       onDelete: CASCADE
