@@ -2,7 +2,7 @@
 # 
 # The MIT License
 #
-# Copyright (c) 2010 Davide Bellettini <davide@davidebellettini.it>
+# Copyright (c) 2010 Davide Bellettini <dbellettini@users.sourceforge.net>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -27,6 +27,7 @@ options:
   collate: utf8_general_ci
 
 dvbNewsletterList:
+  tableName: wnl_lists
   columns:
     id:
       type: integer(4)
@@ -50,6 +51,7 @@ dvbNewsletterList:
     Timestampable: ~     
       
 dvbNewsletterSubscriber:
+  tableName: wnl_subscribers
   columns:
     id:
       type: integer(4)
@@ -64,6 +66,7 @@ dvbNewsletterSubscriber:
     Timestampable: ~
       
 dvbNewsletterListSubscriber:
+  tableName: wnl_lists_has_subscribers
   options:
     symfony:
       form: false
