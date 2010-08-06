@@ -32,6 +32,8 @@ dvbNewsletterLanguage:
     id:
       type: string(2)
       primary: true
+  actAs:
+    Timestampable: ~
 
 dvbNewsletterList:
   tableName: wnl_lists
@@ -73,7 +75,7 @@ dvbNewsletterList:
     Subscribers:
       foreignAlias: Newsletters
       class: sfGuardUser
-      refClass: dvbNewsletterListSubscriber
+      refClass: dvbNewsletterSubscription
       local: list_id
       foreign: subscriber_id
     Language:
@@ -100,6 +102,12 @@ dvbNewsletterSubscription:
     subscriber_id:
       type: integer
       primary: true
+    format:
+      type: enum
+      notnull: true
+      values:
+        - text
+        - html
     is_active:
       type: boolean
       notnull: true
